@@ -3,17 +3,20 @@ import Container from 'react-bootstrap/Container';
 import DayCards from './Components/DayCards';
 import { Row, Col } from 'react-bootstrap'
 import { DAYCARDINFO } from './data';
+import CompNavbar from './Components/ComNavbar';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import './App.scss';
 
 const App = () => (
     <body data-bs-theme='dark'>
+        <CompNavbar></CompNavbar>
         <Container>
             
             <Row>
                 <Col>                                                   
                     <DayCards {...DAYCARDINFO[0]}/>
-                </Col>
+                </Col> 
                 <Col>                                                   
                     <DayCards {...DAYCARDINFO[1]}/>
                 </Col>
@@ -61,6 +64,7 @@ const App = () => (
             </Row>
             
         </Container>
+        <SpeedInsights />
     </body>
 );
 
